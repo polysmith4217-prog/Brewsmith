@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PolySmith3D | Asset Showcase</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Framework Stylesheets -->
+    <link rel="stylesheet" href="https://w3schools.com">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://googleapis.com/css?family=Oswald:400,700&display=swap">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <!-- Your local style sheets (Keep these linked) -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/modelviewer.css">
+    <script src="js/site.js"></script>
+
+    <!-- Loads <model-viewer> for modern browsers -->
+    <script type="module" src="https://googleapis.com"></script>
+
+    <style>
+        /* Cyberpunk Dark Canvas Reset */
+        body, html {
+            background-color: #08080a;
+            color: #f3f4f6;
+            font-family: 'Oswald', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Frosted Glass Floating Navbar */
+        .glass-navbar {
+            background-color: rgba(8, 8, 10, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* 3D Model Display Window Configuration */
+        .showcase-container {
+            min-height: 85vh;
+            padding-top: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Custom Sizing for your Model Viewer Canvas block */
+        .modelviewer {
+            width: 100%;
+            height: 550px; /* High desktop presentation window */
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 24px 48px rgba(0,0,0,0.6);
+            overflow: hidden;
+            position: relative;
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            background-color: #141417; /* Fallback deep asset background */
+        }
+
+        /* Core Typography */
+        .asset-title {
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            line-height: 0.9;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        /* Interactive Metadata Pill Badge */
+        .badge-tech {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #9ca3af;
+            padding: 6px 12px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 🌐 NAVIGATION BAR -->
+    <div class="w3-top">
+        <div class="w3-bar glass-navbar w3-padding-16" id="Site_Navbar">
+            <div class="w3-content" style="max-width:1400px;">
+                <div class="w3-bar-item nav-logo w3-margin-left">POLYSMITH 3D</div>
+                <div class="w3-right w3-hide-small w3-margin-right">
+                    <a href="#" class="w3-bar-item w3-button w3-hover-text-white" style="color:#9ca3af;">BACK TO STUDIO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🌟 MAIN 3D SHOWCASE SECTION -->
+    <div class="w3-container showcase-container">
+        <div class="w3-content" style="max-width:1200px; width:100%;">
+            <div class="w3-row-padding w3-margin-top">
+                
+                <!-- Left Column: Asset Text & Details -->
+                <div class="w3-col l5 m12 s12 w3-margin-bottom" style="padding-right: 40px; margin-top: 20px;">
+                    <div class="badge-tech">Real-Time WebXR Engine Optimized</div>
+                    <h1 class="asset-title w3-margin-top w3-margin-bottom">SODABOX<br>ASSET</h1>
+                    
+                    <p class="w3-text-gray w3-large" style="font-weight: 300; line-height: 1.6; margin-bottom: 24px;">
+                        Hard-surface topology exploration. Testing custom baked ambient occlusion loops, lighting metrics, and channel distribution within a single packed deployment map.
+                    </p>
+
+                    <!-- File Details Table List -->
+                    <div class="w3-border-top w3-border-dark-gray w3-padding-16">
+                        <div class="w3-row w3-small w3-text-gray" style="text-transform: uppercase; letter-spacing: 1px;">
+                            <div class="w3-col s6 w3-padding-small"><strong>Format:</strong> .GLB (Binary GLTF)</div>
+                            <div class="w3-col s6 w3-padding-small"><strong>Lighting:</strong> Neutral Map</div>
+                            <div class="w3-col s6 w3-padding-small"><strong>Controls:</strong> Orbit Interactive</div>
+                            <div class="w3-col s6 w3-padding-small"><strong>AR Modes:</strong> WebXR Capable</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: The 3D Model Viewer Canvas Box -->
+                <div class="w3-col l7 m12 s12">
+                    <!-- YOUR EXACT CODE HOOK INCORPORATED BELOW -->
+                    <div class="modelviewer w3-dark-grey">
+                        <model-viewer 
+                            src="sodabox_final.glb" 
+                            ar 
+                            ar-modes="webxr scene-viewer quick-look" 
+                            camera-controls
+                            poster="img/poster.webp" 
+                            shadow-intensity="1">
+                            <div class="progress-bar hide" slot="progress-bar">
+                                <div class="update-bar"></div>
+                            </div>
+                        </model-viewer>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 🗒 FOOTER BOUNDARY -->
+    <div class="w3-container w3-padding-32 w3-center" style="background-color:#050507; border-top: 1px solid rgba(255, 255, 255, 0.02); margin-top: 40px;">
+        <p class="w3-small w3-text-gray">© 2026 POLYSMITH 3D. Engine built with Google Model Viewer framework.</p>
+    </div>
+
+</body>
+</html>
