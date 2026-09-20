@@ -1,0 +1,197 @@
+/* body styles*/
+
+
+.w3-hover-opacity {cursor: pointer;} 
+
+.wrap {
+    width: 90%;
+    max-width: 1800px ;
+    margin: auto;
+}
+.textwrap {
+    width: 80%;
+    max-width: 1800px ;
+    margin: auto;
+}
+.services {
+    width: 100%;
+
+}
+    
+/* .pagewarning{
+background-image: url(../img/PS_background.jpg);
+background-repeat: repeat-y; 
+
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: right top;
+ background-size: cover;
+  background-position: center;
+  }
+
+*/
+/*  fonts */
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "OpenSans"}
+h2 {
+    font-size: 150%;
+}
+
+h1 {
+    font-size: 200%;
+     font-weight: 400;
+}
+
+.w3-wide {letter-spacing: 10px;}
+
+.ps-jumbo {font-size: 7vw}
+
+
+
+
+
+
+
+
+
+
+
+/* Parallax start*/
+
+/*  Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height)
+.bgimg-1 {
+  background-image: url("/img/anvil.jpg");
+  min-height: 900px;
+} */
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/img/bg4.png");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/img/Image_fx.png");
+}
+
+
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+/* Parallax end*/
+
+
+
+
+
+
+
+
+/*Image compare slider start*/
+
+* {box-sizing: border-box;}
+
+.img-comp-container {
+  position: relative;
+  height: 540px; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow:hidden;
+}
+
+.img-comp-img img {
+  display:block;
+    align-content: center;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+/*Image compare slider end*/
+
+
+/*Image slideshow*/
+.mySlides {display:none;}
+
+/*Image slideshow end*/
+
+
+
+
+
+
+
+
+
+
+
+.herovideo {
+
+
+  min-width: 100%; 
+  min-height: 100vh;
+}
+
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100vh;
+  z-index: -1;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+ z-index: -1;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
